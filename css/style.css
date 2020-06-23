@@ -1,0 +1,113 @@
+:root {
+  /* --main-color: #5dbcd2; */
+  --main-color: #ddd29f;
+}
+* {
+  margin: 0;
+}
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.main-bg {
+  background-color: #2b2a2a;
+}
+.text-center {
+  text-align: center;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+.center-vertical {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+nav ul {
+  text-align: center;
+  margin: 0;
+}
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+nav ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--main-color);
+  padding: 20px 10px;
+}
+
+.banner {
+  background-image: url("../images/soraka-banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  min-height: 800px;
+}
+
+.banner .container .banner-content {
+  padding: 100px 0;
+  width: 50%;
+  color: var(--main-color);
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.banner .container .banner-content h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.banner .container .banner-content h2 {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+main {
+  background-image: url("../images/stars-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--main-color);
+  padding: 80px 0;
+}
+main .skins .skin {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+main .skins .title {
+  margin-bottom: 80px;
+  font-size: 40px;
+}
+main .skins .skin:last-of-type {
+  margin-top: 20px;
+}
+main .skins .skin section {
+  width: 50%;
+}
+.skins p {
+  font-size: 20px;
+  font-weight: 800;
+}
+main .skins .skin .skin-image img {
+  width: 100%;
+  height: auto;
+}
+main .skins .skin .bio {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main .skins .skin .bio .descreption {
+  text-align: justify;
+  line-height: 1.4;
+}
+main .skins .skin .price {
+  text-align: right;
+}
+footer {
+  padding: 40px 0;
+  color: var(--main-color);
+}
