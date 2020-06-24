@@ -2,11 +2,33 @@
 let points;
 
 function IsWorthy() {
-  let worthy = confirm(
-    "do you love soraka ? \n press ok for yes \n press cancel for no"
+  for (let trials = 0; trials < 3; trials++) {
+    let worthy = confirm(
+      "do you love soraka ? \n press ok for yes \n press cancel for no"
+    );
+    if (worthy) break;
+    if (trials != 2) continue;
+    // kick the user out if he didnt pass
+    if (!worthy) {
+      window.close();
+    }
+  }
+}
+function howManySkins() {
+  let skinsNum;
+  skinsNum = prompt(
+    "how many skins do you have ( enter a number from 0-11)",
+    0
   );
-  // kick the user out if he didnt pass
-  if (!worthy) window.close();
+  while (skinsNum < 0 || skinsNum > 11) {
+    skinsNum = prompt(
+      "how many skins do you have ( enter a number from 0-11)",
+      0
+    );
+    skinsNum = parseInt(skinsNum);
+  }
+  let element = document.querySelector(".how-many-skins");
+  element.innerHTML = `you have ${skinsNum} skins`;
 }
 function isMaster() {
   points = prompt("how many points do you have with soraka", "0");
@@ -36,4 +58,5 @@ function makeOffer() {
 }
 IsWorthy();
 isMaster();
+howManySkins();
 makeOffer();
